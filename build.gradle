@@ -1,8 +1,11 @@
 plugins {
+    id "groovy"
     id "java-library"
     id "maven-publish"
     id "signing"
 }
+
+apply plugin: "groovy"
 
 group "io.github.srultralord"
 version "0.1"
@@ -10,6 +13,8 @@ version "0.1"
 repositories {
     mavenCentral()
 }
+
+sourceCompatibility = 1.8
 
 dependencies {
     implementation "org.projectlombok:lombok:1.18.24"
@@ -31,6 +36,19 @@ publishing {
                 description = "Librerías para los microservicios de Banquito"
                 url = "https://github.com/SrUltraLord/banquito-libs"
                 inceptionYear = '2022'
+
+                licenses {
+                    name = "MIT License"
+                    url = "http://www.opensource.org/licenses/mit-license.php"
+                }
+
+                developers {
+                    developer {
+                        id = "srultralord"
+                        name = "David Reyes"
+                        email = "dareyes6@espe.edu.ec"
+                    }
+                }
 
                 scm {
                     connection = "scm:git:git:github.com/SrUltraLord/banquito-libs.git"

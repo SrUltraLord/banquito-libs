@@ -1,4 +1,4 @@
-package com.banquito.core.accounts.dto;
+package io.github.srultralord.core.accounts.dto;
 
 import lombok.Builder;
 import lombok.Data;
